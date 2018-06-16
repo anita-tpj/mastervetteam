@@ -1,0 +1,68 @@
+/*
+ Theme Name:   Animal Pet Store Child
+ Theme URI:    http://yourwebsite.com/twentyfourteen-child/
+ Description:  Mastervet theme based on Animal Pet Store theme 
+ Author:       Anita Tapaji
+ Author URI:   http://tanita.webege.com
+ Template:     pet-animal-store
+ Version:      1.0.0
+ Tags:         green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, responsive-layout, infinite-scroll, post-slider, design, food, journal, magazine, news, photography, portfolio, clean, contemporary, dark, elegant, modern, professional, sophisticated
+ Text Domain:  mastervet
+*/
+
+/*Header*/
+
+.topbar {
+    background: none;
+}
+
+.logo h1 a,
+p.email_title,
+p.call_title,
+p.email,
+p.call {
+  color: #333;
+}
+.logo p{
+  font-size:12px;
+  color: green;
+}
+
+.site_header h1 {
+    text-align: center;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.site_header h1 a {
+    color: #333;
+}
+
+.baricon .col-sm-4 {
+    position: relative;
+}
+
+.baricon p {
+    padding-left: 40px;
+    white-space: nowrap;
+}
+
+.baricon i {
+    color: #333;
+}
+
+.baricon i.fa-phone-volume,
+.baricon i.fa-at {
+    border: none;
+    font-size: 3rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    transform: rotate(-30deg);
+}
+
+/*Footer*/
+
+.footertown {
+    background: #ccc;
+}
