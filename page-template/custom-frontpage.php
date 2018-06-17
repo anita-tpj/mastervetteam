@@ -9,74 +9,69 @@
 
 get_header(); ?>
 
-<?php do_action( 'pet_animal_store_above_slider' ); ?>
 
-<?php
-	// Get pages set in the customizer (if any)
-	$pages = array();
-	for ( $count = 1; $count <= 5; $count++ ) {
-		$mod = absint( get_theme_mod( 'pet_animal_store_slidersettings-page-' . $count ) );
-		if ( 'page-none-selected' != $mod ) {
-			$pages[] = $mod;
-		}
-	}
-	if( !empty($pages) ) :
-		$args = array(
-			'posts_per_page' => 5,
-			'post_type' => 'page',
-			'post__in' => $pages,
-			'orderby' => 'post__in'
-		);
-		$query = new WP_Query( $args );
-		if ( $query->have_posts() ) :
-			$count = 1;
-			?>
-			<div class="slider-main">
-				<div id="slider" class="nivoSlider">
-					<?php
-						$pet_animal_store_n = 0;
-					while ( $query->have_posts() ) : $query->the_post();
-							
-							$pet_animal_store_n++;
-							$pet_animal_store_slideno[] = $pet_animal_store_n;
-							$pet_animal_store_slidetitle[] = get_the_title();
-							$pet_animal_store_slidecontent[] = get_the_content();
-							$pet_animal_store_slidelink[] = esc_url(get_permalink());
-							?>
-								<img src="<?php the_post_thumbnail_url('full'); ?>" title="#slidecaption<?php echo esc_attr( $pet_animal_store_n ); ?>" />
-							<?php
-						$count++;
-					endwhile;
-						wp_reset_postdata();
-					?>
-				</div>
+<section id="about-us">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+			<h3 class="title-line text-center mb-5">O nama</h3>
+				<div class="border-image">
+    				<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
+    			</div>
+				<p>
+					Veterinarska ambulanta u Petrovaradinu – Master Vet Team, ambulanta koja je uvek otvorena za sve vlasnike kućnih ljubimaca 
+					kojima je potrebna naša pomoć.
+					Tokom godina uspešnog rada pomogli smo mnogim psima, mačkama, pticama, gušterima, iguanama, kunićima, zmijama
+					i drugim životinjama. Naš veterinar tim je strpljiv, prijatan i što je najbitnije edukovan i sa dugogodišnjim iskustvom, 
+					uvek spremni da pomognu i daju savet.
+				</p>
+				<p>	
+					Posetite i Vi našu ambulantu sa svojim ljubimcem na adresi:
+					Svetosavska 20, Petrovaradin
 
-				<?php
-				$pet_animal_store_k = 0;
-			    foreach( $pet_animal_store_slideno as $pet_animal_store_sln ){ ?>
-					<div id="slidecaption<?php echo esc_attr( $pet_animal_store_sln ); ?>" class="nivo-html-caption">
-						<div class="slide-cap  ">
-							<div class="container">
-								<h2><?php echo esc_html( $pet_animal_store_slidetitle[$pet_animal_store_k] ); ?></h2>
-								<p><?php echo esc_html( $pet_animal_store_slidecontent[$pet_animal_store_k] ); ?></p>
-								<a class="read-more" href="<?php echo esc_url( $pet_animal_store_slidelink[$pet_animal_store_k] ); ?>"><?php  esc_html_e( 'Learn More','pet-animal-store' ); ?></a>
-							</div>
-						</div>
-					</div>
-		    	<?php $pet_animal_store_k++;
-				} ?>
+					i uverite se u našu stručnost i opremljenost ambulante.
+				</p>
+				<p>
+					Radno vreme: svaki dan radni dan i vikendom 24h/7
+				</p>
 			</div>
-		<?php else : ?>
-				<div class="header-no-slider"></div>
-			<?php
-		endif;
-	else : ?>
-			<div class="header-no-slider"></div>
-		<?php
-	endif;
-?>
+			<div class="col-md-6">
+				<img src='<?php echo get_stylesheet_directory_uri(); ?>/images/master-vet-team.jpg'>
+			</div>
+		</div>
+	</div>
+	
+</section>
 
-<?php do_action( 'pet_animal_store_below_slider' ); ?>
+<section id="our-services">
+	<div class="container">
+		<h3 class="title-line text-center mb-5">Naše usluge</h3>
+		<div class="border-image">
+    			<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
+    	</div>
+		<div class="row">
+
+	<?php
+		$args = array(
+		'numberposts' => 3,
+		);
+		$recent_posts = wp_get_recent_posts( $args );
+
+	
+		foreach ($recent_posts as $post):
+
+			get_template_part( 'template-parts/content', 'home' );
+
+		endforeach;
+			wp_reset_query();;
+		?>
+
+	</div><!--- end row -->
+</div>
+
+</section>
+
+
 
 <section id="our-products">
 	<div class="container">
@@ -120,6 +115,40 @@ get_header(); ?>
 </section>
 
 <?php do_action( 'pet_animal_store_above_product_section' ); ?>
+
+
+
+<section id="news">
+	<div class="container">
+		<h3 class="title-line text-center mb-5">Zanimljivosti i Saveti</h3>
+		<div class="border-image">
+    			<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
+    	</div>
+
+		<div class="row">
+
+	<?php
+		$args = array(
+		'numberposts' => 3,
+		);
+		$recent_posts = wp_get_recent_posts( $args );
+
+	
+		foreach ($recent_posts as $post):
+
+			get_template_part( 'template-parts/content', 'home' );
+
+		endforeach;
+			wp_reset_query();;
+		?>
+
+	</div><!--- end row -->
+</div>
+
+</section>
+
+
+
 
 <div class="container">
   <?php while ( have_posts() ) : the_post(); ?>

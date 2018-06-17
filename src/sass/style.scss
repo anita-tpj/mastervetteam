@@ -17,7 +17,10 @@
 
 body {
     font-size: 16px;
-  }
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
 
   h1 {
     font-size: 2.5rem;
@@ -43,16 +46,46 @@ body {
     font-size: 0.6rem;
   }
 
+}
+
 /*Header*/
 
 #header {
+
+    &.header-slider {
+        background-color: $white;
+        align-items: center;
+    }
+
     .menubg {
         background: $primaryColor;
+    }
+
+    .cta {
+        p {
+            margin: 0;
+            color: $red;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            text-align: center
+        }
     }
 }
 
 .topbar {
     background: none;
+
+    .container {
+        max-width: 100%;
+
+        @media screen and (min-width:576px) {
+            max-width: 100%;
+        }
+
+        @media screen and (min-width:768px) {
+            max-width: 100%;
+        }
+    }
 }
 
 .logo {
@@ -115,11 +148,19 @@ body {
     margin:auto;
     padding:0;
     position:relative;
-  }
+
   .nivo-caption {
     top:20%!important;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1.5rem 1rem!important;;
+    color: $textColor!important;
+
+    @media screen and (min-width:768px) {
+        width:60%!important;
+        top:30%!important;
+    }
   }
-  #slider .slide-cap{
+  #slider .slide-cap {
     position:relative;
     margin:auto;
     width:90%;
@@ -127,29 +168,98 @@ body {
     margin-left:auto;
     top:25%;
   }
-  #slider .slide-cap h2{
-    padding:0 25px 5% 0;
+
+  #slider .slide-cap h2 {
+    font-size: 1.5rem;
+    padding:0;
     text-transform:uppercase;
     text-align: left;
+
+    @media screen and (min-width:576px) {
+        font-size: 2rem;
+    }
   }
-  #slider .slide-cap p{
-    color:#ffffff;
+  #slider .slide-cap p {
     font-weight:700;
-    margin:0 0 0 0;
-    line-height:20px;
-    border-radius:0 0 5px 5px;
-    font:25px/20px arial;
-    text-transform:uppercase;
-    font-weight:bold;
+    color:$textColor;
+    text-transform: none;
+    margin:0;
+    padding: 1rem .5rem 2rem 0;
+    font: 1rem arial;
+    line-height: 1.7!important;
+    font-weight:normal;
+    text-align: left;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: inline-block;
+    }
   }
-  #slider .slide-cap a.read-more{
+
+  #slider .slide-cap a.read-more {
     padding:9px 50px;
     color:#ffffff;
     background: #70b908;
     font-size:18px;
     height:auto;
     display:table;
+    white-space: nowrap;
   }
+}
+
+
+
+  /*Home Page Setions*/
+
+#about-us,
+#our-products,
+#our-services,
+#our-gallery,
+#news {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    letter-spacing: 1px;
+
+    h3 {
+    text-align: center;
+    margin-bottom: 0!important;
+    color: #333;
+    margin-top: 0;
+    font-size: 32px;
+    font-weight: normal;
+    }
+
+    .border-image {
+        margin-bottom: 2rem;
+    }
+}
+
+#our-services, {
+    background-color: $green-lighter;
+}
+
+
+#our-products .woocommerce a.button {
+  padding: 10px;
+  color: #333;
+  font-size: 13px;
+  border-radius: 0;
+  border: solid 2px #333;
+  background: transparent;
+}
+#our-products .woocommerce a.button:hover {
+  color: #fff;
+  border: none;
+  background: #70b908;
+}  
+h2.woocommerce-loop-product__title {
+  font-size: 25px !important;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #333;
+  font-weight: normal;
+  padding: 5px 0 !important;
+}
 
 
 /*Footer*/
@@ -157,3 +267,53 @@ body {
 .footertown {
     background: $footerColor;
 }
+
+
+
+.card {
+    border: 4px double #70b908!important;
+    background-color: transparent;
+    max-width: 370px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  
+    .post-excerpt-link {
+      padding: 0 0.1rem;
+    }
+  
+    .card-numb {
+      font-size: 3rem;
+      margin-top: -2rem;
+    }
+  
+    .card-meta {
+      color: $primaryColor;
+      font-style: italic;
+      font-weight: 500;
+      font-size: .9rem;
+      padding-bottom: 1.5rem;
+    }
+    .card-body {
+      padding: .5rem 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: .9rem;
+    }
+    span {
+      color: $primaryColor;
+      font-size: 1.5rem;
+  
+      a {
+        display: inline-block;
+        padding-top:.5rem;
+        color: $primaryColor;
+        text-transform: uppercase;
+        font-size: .9rem;
+        font-weight: 500;
+      }
+    }
+  }
