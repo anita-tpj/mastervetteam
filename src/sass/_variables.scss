@@ -1,0 +1,39 @@
+//Variables:
+
+/*---------------SCSS for colors---------------*/
+$blue: #0099a1;
+$green: #17b749;
+$green-light: #7cd8a7;
+$green-lighter: #d8e4b4;
+$yellow: #e4eab9;
+$grey: #ccc;
+$lightGray: #ddd;
+$darkGray: #888888;
+$black: #222;
+$lightBlack:#333;
+$white: #fff;
+$darkWhite: #f2f3ea;
+
+
+$primaryColor: $green;
+$secondaryColor: $green-light;
+$logoColor: $blue;
+$textColor: $lightBlack;
+$titleColor: $lightBlack;
+$menuColor: $black;
+/*$bodyColor: $yellow;*/
+/*$bodyColor: $darkGray;*/
+$footerColor: $grey;
+$linkColor: $lightGray;
+$btnColor: $white;
+
+
+/*---------------SCSS for font--------------*/
+$font-family-base: 'Quicksand', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.7;
+$normal: 400;
+$medium: 500;
+$heavy: 700;
+/*---------------SCSS for guttter---------------*/
+$gutter: 2%;

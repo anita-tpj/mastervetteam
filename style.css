@@ -9,47 +9,109 @@
  Tags:         green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, responsive-layout, infinite-scroll, post-slider, design, food, journal, magazine, news, photography, portfolio, clean, contemporary, dark, elegant, modern, professional, sophisticated
  Text Domain:  mastervet
 */
+/*---------------SCSS for colors---------------*/
+/*$bodyColor: $yellow;*/
+/*$bodyColor: $darkGray;*/
+/*---------------SCSS for font--------------*/
+/*---------------SCSS for guttter---------------*/
+/* Font sizes */
+body {
+  font-size: 16px; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 0.8rem; }
+
+h6 {
+  font-size: 0.6rem; }
+
 /*Header*/
+#header .menubg {
+  background: #17b749; }
+
 .topbar {
-  background: blue; }
-
-.logo h1 a,
-p.email_title,
-p.call_title,
-p.email,
-p.call {
-  color: #333; }
-
-.logo p {
-  font-size: 12px;
-  color: green; }
+  background: none; }
 
 .site_header h1 {
   text-align: center;
   line-height: 1.7;
   text-transform: uppercase; }
-
-.site_header h1 a {
-  color: #333; }
+  .site_header h1 a {
+    color: #333; }
 
 .baricon .col-sm-4 {
   position: relative; }
 
 .baricon p {
   padding-left: 40px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-size: 12px;
+  color: #17b749; }
 
 .baricon i {
   color: #333; }
 
 .baricon i.fa-phone-volume,
 .baricon i.fa-at {
+  color: #17b749;
   border: none;
   font-size: 3rem;
   position: absolute;
-  left: 0;
-  top: -3px;
+  left: -24px;
+  top: -7px;
   transform: rotate(-30deg); }
+
+/* --------- SLIDER--------- */
+#slider {
+  max-width: 100%;
+  margin: auto;
+  padding: 0;
+  position: relative; }
+
+.nivo-caption {
+  top: 20% !important; }
+
+#slider .slide-cap {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  top: 25%; }
+
+#slider .slide-cap h2 {
+  padding: 0 25px 5% 0;
+  text-transform: uppercase;
+  text-align: left; }
+
+#slider .slide-cap p {
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 0 0;
+  line-height: 20px;
+  border-radius: 0 0 5px 5px;
+  font: 25px/20px arial;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+#slider .slide-cap a.read-more {
+  padding: 9px 50px;
+  color: #ffffff;
+  background: #70b908;
+  font-size: 18px;
+  height: auto;
+  display: table; }
 
 /*Footer*/
 .footertown {

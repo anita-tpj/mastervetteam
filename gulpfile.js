@@ -49,4 +49,5 @@ gulp.task('serve', function() {
 });
 
 // Default Task
-gulp.task('default', ['message', /*'imageMin'*/, 'sass', /*'minify'*/, 'serve']);
+gulp.task('default', ['message', 'sass', 'serve']);
+//gulp.task('default', ['message', /*'imageMin'*/, 'sass', /*'minify'*/, 'serve']);
