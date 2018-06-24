@@ -16,7 +16,7 @@ get_header(); ?>
 <section id="theme-main-box">
 	<div class="container">
         <?php
-            $left_right = get_theme_mod( 'pet_animal_store_theme_options','One Column');
+            $left_right = get_theme_mod( 'pet_animal_store_theme_options','Right Sidebar');
             if($left_right == 'Left Sidebar'){ ?>
             <div class="row">
                 <div class="col-md-4 col-sm-4"><?php get_sidebar(); ?></div>

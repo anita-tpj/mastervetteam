@@ -13,7 +13,7 @@ get_header(); ?>
 <section id="about-us">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 			<h3 class="title-line text-center mb-5">O nama</h3>
 				<div class="border-image">
     				<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
@@ -35,8 +35,8 @@ get_header(); ?>
 					Radno vreme: svaki dan radni dan i vikendom 24h/7
 				</p>
 			</div>
-			<div class="col-md-6">
-				<img src='<?php echo get_stylesheet_directory_uri(); ?>/images/master-vet-team.jpg'>
+			<div class="col-md-6 col-sm-12">
+				<img class="double-border-img" src='<?php echo get_stylesheet_directory_uri(); ?>/images/master-vet-team.jpg'>
 			</div>
 		</div>
 	</div>
@@ -44,30 +44,59 @@ get_header(); ?>
 </section>
 
 <section id="our-services">
-	<div class="container">
-		<h3 class="title-line text-center mb-5">Naše usluge</h3>
-		<div class="border-image">
-    			<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
-    	</div>
-		<div class="row">
+    <h3 class="title-line text-center mb-5">Naše usluge</h3>
+    <div class="border-image">
+            <img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
+    </div>
+    <div class="row">
 
-	<?php
-		$args = array(
-		'numberposts' => 3,
-		);
-		$recent_posts = wp_get_recent_posts( $args );
+        <div class="col-sm-6 col-lg-3">
+            <div class="text-center">
+                <div class="home-blog-box">
+                    <span><i class="fa fa-microchip"></i><i class="fa fa-syringe"></i></span>
+                    <h4 class="team-batch">Vakcine i čipovanje</h4>
+                    <p class="content">Uz svaku vakcinaciju bespaltan klinički pregled!</p>
+                </div>
+            </div>
+        </div>
 
-	
-		foreach ($recent_posts as $post):
+        <div class="col-sm-6 col-lg-3">
+            <div class="text-center">
+                <div class="home-blog-box">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <h4 class="team-batch">Hirurgija</h4>
+                    <p class="content">
+                        Kod nas se sve hiruške intervencije vrše u posebnoj operacionoj sali!
+                        U cenu svake hiruške intervencije je uključen postoperativni tretman Vašeg ljubimca i vađenje konaca.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-			get_template_part( 'template-parts/content', 'home' );
+        <div class="col-sm-6 col-lg-3">
+            <div class="text-center">
+                <div class="home-blog-box">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <h4 class="team-batch">Kućne posete</h4>
+                    <p class="content">Ukoliko iz nekog razloga niste u mogućnosti da dovedete svog ljubimca, doći ćemo mi do vas!</p>
+                </div>
+            </div>
+        </div>
 
-		endforeach;
-			wp_reset_query();;
-		?>
-
-	</div><!--- end row -->
-</div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="text-center">
+                <div class="home-blog-box">
+                    <i class="fa fa-h-square"></i>
+                    <h4 class="team-batch">Hitne Intervencije</h4>
+                    <p class="content">
+                        Bolest ne bira vreme. Zbog toga, naš dežurni veterinar je na raspolaganju Vama i vasim ljubimcima
+                        0/24h na telefon 069/89-89-107
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!--- end row -->
+    <div class="service-btn text-center"><a class="read_more" href="<?php echo get_permalink(); ?>">Saznaj više</a></div>
 
 </section>
 
@@ -127,21 +156,17 @@ get_header(); ?>
 
 		<div class="row">
 
-	<?php
-		$args = array(
-		'numberposts' => 3,
-		);
-		$recent_posts = wp_get_recent_posts( $args );
+            <?php
+            $the_query = new WP_Query( 'posts_per_page=3' );
 
-	
-		foreach ($recent_posts as $post):
 
-			get_template_part( 'template-parts/content', 'home' );
+            while ($the_query -> have_posts()) : $the_query -> the_post();
+                get_template_part( 'template-parts/content', 'home' );
 
-		endforeach;
-			wp_reset_query();;
-		?>
+            endwhile;
+            wp_reset_postdata();
 
+            ?>
 	</div><!--- end row -->
 </div>
 
