@@ -12,8 +12,8 @@ get_header(); ?>
             $left_right = get_theme_mod( 'pet_animal_store_theme_options','Right Sidebar');
             if($left_right == 'Left Sidebar'){ ?>
             <div class="row">
-				<div class="col-md-4 col-sm-4"><?php get_sidebar();?></div>
-				<div class="col-md-8 col-sm-8" id="content-aa">
+				<div class="col-md-4"><?php get_sidebar();?></div>
+				<div class="col-md-8" id="content-aa">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<h1><?php the_title(); ?></h1>
 						<div class="metabox">
@@ -65,7 +65,7 @@ get_header(); ?>
 	       </div>
 	    <?php }else if($left_right == 'Right Sidebar'){ ?>
 		    <div class="row">
-		       	<div class="col-md-8 col-sm-8" id="content-aa">
+		       	<div class="col-md-8" id="content-aa">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<h3><?php the_title(); ?></h3>
 						<div class="metabox">
@@ -113,7 +113,7 @@ get_header(); ?>
 						}
 					endwhile; // end of the loop. ?>
 		       	</div>
-				<div class="col-md-4 col-sm-4"><?php get_sidebar();?></div>
+				<div class="col-md-4"><?php get_sidebar();?></div>
 			</div>
 		<?php }else if($left_right == 'One Column'){ ?>
 			<div id="content-aa">

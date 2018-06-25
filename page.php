@@ -1,16 +1,23 @@
 <?php
 /**
- * Template Name:Page with Right Sidebar
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package Pet Animal Store
  */
 
 get_header(); ?>
 
-<?php do_action( 'pet_animal_store_header_pageright' ); ?>
+<?php do_action( 'pet_animal_store_header_page' ); ?>
 
 <div class="container">
-    <div class="middle-align row">       
-		<div class="col-md-8" id="content-aa" >
-			<?php while ( have_posts() ) : the_post(); ?>
+    <div class="middle-align">       
+        <div id="content-aa" >
+            <?php while ( have_posts() ) : the_post(); ?>
                 <div class="feature-box">   
                     <img src="<?php the_post_thumbnail_url('full'); ?>" width="100%">
                 </div>
@@ -26,14 +33,10 @@ get_header(); ?>
                         comments_template();
                 ?>
             <?php endwhile; // end of the loop. ?>             
-        </div>
-        <div class="col-md-4" id="sidebar">
-			<?php dynamic_sidebar('sidebar-2'); ?>
-		</div>
-        <div class="clearfix"></div>
+        </div>            
     </div>
 </div>
 
-<?php do_action( 'pet_animal_store_footer_pageright' ); ?>
+<?php do_action( 'pet_animal_store_footer_page' ); ?>
 
 <?php get_footer(); ?>

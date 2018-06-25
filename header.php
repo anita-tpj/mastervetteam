@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div id="header" class="header-slider row">      
-                    <div class="col-sm-8 col-md-9 menubg">
+                    <div class="col-sm-12 col-md-9 menubg">
                         <div class="menubox nav">
                             <div class="mainmenu">
                                 <?php wp_nav_menu( array('theme_location'  => 'primary') ); ?>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="col-sm-4 col-md-3 cta">
+                    <div class="col-md-3 cta">
                         <p><?php echo __("Hitne intervencije 00h-24h", 'pet-animal-store'); ?></p>
                         <p><?php echo __("065/89-89-107", 'pet-animal-store'); ?></p>
 					</div> 

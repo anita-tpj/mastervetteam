@@ -14,11 +14,10 @@ function elt_excerpt_length(){
 add_filter('excerpt_length', 'elt_excerpt_length');
 
 function elt_excerpt_more( $more ) {
-    if(is_front_page()){
-        return '<div class=""><a class="read_more" href="'. get_permalink( get_the_ID() ) . '">' . __('Saznaj više', 'animal-pet-store') . '</a></div>';
+    if(is_front_page() || is_home()){
+        return '<a class="post-excerpt-link" href="'. get_permalink( get_the_ID() ) . '">' . __('...', 'animal-pet-store') . '</a>';
     }else{
-        return '<a class="post-excerpt-link" href="'. get_permalink( get_the_ID() ) . '">' . __(' ... više', 'animal-pet-store') . '</a>';
-
+        return '<div class=""><a class="read_more" href="'. get_permalink( get_the_ID() ) . '">' . __('Saznaj više', 'animal-pet-store') . '</a></div>';
     }
 }
 add_filter( 'excerpt_more', 'elt_excerpt_more' );

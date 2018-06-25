@@ -20,7 +20,7 @@
       <h2><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
       <p><?php the_excerpt();?></p>
       <div class="service-btn">
-        <a href="<?php the_permalink(); ?>" class="Masters-In-Digital-Marketing" title="<?php esc_attr_e('Read More','pet-animal-store'); ?>"><?php esc_html_e('Read More','pet-animal-store'); ?></a>  
+        <a href="<?php the_permalink(); ?>"><?php esc_html_e('Saznaj više','pet-animal-store'); ?></a>
       </div> 
     </div>
   </div>

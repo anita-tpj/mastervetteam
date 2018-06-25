@@ -19,7 +19,7 @@ get_header(); ?>
             $left_right = get_theme_mod( 'pet_animal_store_theme_options','Right Sidebar');
             if($left_right == 'Left Sidebar'){ ?>
             <div class="row">
-                <div class="col-md-4 col-sm-4"><?php get_sidebar(); ?></div>
+                <div class="col-md-4"><?php get_sidebar(); ?></div>
                 <div id="blog_hospital" class="hospi-blog col-md-8 col-sm-8">
                     <?php if ( have_posts() ) :
                     /* Start the Loop */
@@ -52,7 +52,7 @@ get_header(); ?>
             <div class="clearfix"></div>
         <?php }else if($left_right == 'Right Sidebar'){ ?>
             <div class="row">
-                <div id="blog_hospital" class="hospi-blog col-md-8 col-sm-8">
+                <div id="blog_hospital" class="hospi-blog col-md-8">
                     <?php if ( have_posts() ) :
                         /* Start the Loop */
                           
@@ -80,7 +80,7 @@ get_header(); ?>
                         <div class="clearfix"></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4"><?php get_sidebar(); ?></div>
+                <div class="col-md-4"><?php get_sidebar(); ?></div>
             </div>
         <?php }else if($left_right == 'One Column'){ ?>
             <div id="blog_hospital" class="hospi-blog flipInX ">

@@ -80,11 +80,23 @@ body {
   }
 }
 
+.service-btn a:hover {
+  background: $primaryColor;
+  color: #fff;
+  border: solid 2px $primaryColor;
+}
+
 /*Header*/
 
 .toggle {
-  a {
+
+  @media (min-width: 720px) {
+    display: none;
+  }
+
+  a.toggleMenu {
     background-color: $white;
+    border: none;
     img {
       width: 70px;
     }
@@ -93,6 +105,21 @@ body {
 
 .topbar {
   background: none;
+  padding: 0;
+
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: 720px) {
+    padding: 18px 0;
+
+    .container {
+      padding-right: -15px;
+      padding-left: -15px;
+    }
+  }
 
   .site_header {
     .row:first-of-type {
@@ -100,7 +127,7 @@ body {
       align-items: center;
       display: none;
 
-      @media (min-width: 768px) {
+      @media (min-width: 720px) {
         display: flex;
       }
     }
@@ -123,7 +150,7 @@ body {
       font-family: 'Cinzel', serif;
       letter-spacing: 1.5px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 720px) {
         display: block;
       }
 
@@ -141,7 +168,7 @@ body {
       max-width: 100%;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:720px) {
       max-width: 100%;
     }
   }
@@ -151,27 +178,104 @@ body {
 
 #header {
 
-    &.header-slider {
-        background-color: $white;
-    }
+  &.header-slider {
+      background-color: $white;
+  }
 
-    .menubg {
-        background: $primaryColor;
+  .menubg {
+      background: $primaryColor;
+  }
+
+  @media (max-width: 720px) {
+
+    .nav {
+      top: 0;
+
+      @media (max-width: 720px) {
+        display: none!important;
+      }
+
+      .mainmenu {
+        width: 100%;
+
+        ul {
+          background-color: $white;
+
+          li {
+            border-top: 1px $primaryColor solid;
+            text-align: center;
+
+            a {
+              color: $primaryColor!important;
+
+              &:hover {
+                background-color: $primaryColor;
+                color: $white!important;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 
     .cta {
+      display: none;
+
+      @media (min-width: 720px) {
+        display: block;
 
         p {
-            margin: 0;
-            color: $red;
-            font-weight: bold;
-            letter-spacing: 0.05rem;
-            text-align: center
+          margin: 0;
+          color: $red;
+          font-weight: bold;
+          letter-spacing: 0.05rem;
+          text-align: center
         }
 
-      &:before {
+        &:before {
+          content: '';
+          background: $green-lighter;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          transform: skew(20deg);
+        }
+
+        &:after {
+          content: '';
+          background: $green-lighter;
+          position: absolute;
+          width: 30px;
+          height: 100%;
+          right: -13px;
+          top: 0;
+          z-index: 0;
+        }
+      }
+
+    }
+
+  .menubg {
+    background: none;
+
+    &:after {
+      display: none
+    }
+
+    &:before {
+      display: none
+    }
+
+    @media (min-width: 720px){
+
+      &:after {
         content: '';
-        background: $green-lighter;
+        display: block;
+        background: $primaryColor;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -181,43 +285,18 @@ body {
         transform: skew(20deg);
       }
 
-      &:after {
+      &:before {
         content: '';
-        background: $green-lighter;
+        display: block;
+        background: $primaryColor;
         position: absolute;
         width: 30px;
         height: 100%;
-        right: -13px;
+        left: -13px;
         top: 0;
         z-index: 0;
       }
     }
-
-  .menubg {
-    background: none;
-
-    &:after {
-      content: '';
-      background: $primaryColor;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      z-index: -1;
-      transform: skew(20deg);
-    }
-    &:before {
-      content: '';
-      background: $primaryColor;
-      position: absolute;
-      width: 30px;
-      height: 100%;
-      left: -13px;
-      top: 0;
-      z-index: 0;
-    }
-
   }
 
   #menu-top-menu {
@@ -295,14 +374,13 @@ body {
 
 /* --------- SLIDER--------- */
 #slider{
-  max-width:100%;
-  height: 500px;
+  width:auto;
   margin:auto;
   padding:0;
   position:relative;
 
+
   .nivo-caption {
-    top:20%!important;
     background: rgba(255, 255, 255, 0.4);
     padding: 1.5rem 1rem!important;;
     color: $textColor!important;
@@ -310,7 +388,7 @@ body {
       color: $white;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:720px) {
         width:60%!important;
         top:30%!important;
     }
@@ -354,7 +432,7 @@ body {
     text-transform: none;
     text-shadow: 1px 1px 10px #333;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:720px) {
         display: inline-block;
     }
   }
@@ -404,7 +482,7 @@ body {
     .double-border-img {
       width: 400px;
       margin-top: 1rem;
-      @media (min-width: 768px) {
+      @media (min-width: 720px) {
         margin-top: 8rem;
       }
     }
@@ -461,17 +539,36 @@ h2.woocommerce-loop-product__title {
 .footertown {
   background: $green-lighter;
   border-top: 3px solid $primaryColor;
+  font-size: 0.9rem;
 
   p,
   .widget ul li a{
     color: $textColor;
+    font-size: 0.8rem;
+
+    &:hover {
+      color: $primaryColor;
+    }
   }
 
   .widget ul li {
-    background: url(images/pet-line.png) no-repeat 1px 0px;
-    margin: 0 5px 20px 5px;
-    padding: 0 20px 5px 35px;
+    margin: 0 5px 0px 5px;
+    padding: 0 20px 7px 0;
     white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-color: $primaryColor;
+  }
+
+  .widget.widget_media_image {
+    padding: 0;
+    margin: 1.5rem;
+    text-align: center;
+
+    img {
+      border: 4px double $primaryColor;
+      min-width: 100px;
+    }
+
   }
 
   i.social-icon{
@@ -558,7 +655,18 @@ h2.woocommerce-loop-product__title {
 .home-blog-box {
   background-color: #EFF0F0;
   border: 4px double #70b908!important;
-  padding: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  .blog-img {
+    position: relative;
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
   p {
     font-size: 0.9rem;
   }
@@ -618,7 +726,7 @@ h2.woocommerce-loop-product__title {
     padding: 2rem;
     width: 100%;
 
-    @media (min-width: 768px){
+    @media (min-width: 720px){
       width: auto!important;
     }
 

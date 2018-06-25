@@ -21,13 +21,18 @@
     </div>
 </div>-->
 
-<div class="col-sm-4">
+<div class="col-md-4">
     <div class="text-center">
         <div class="home-blog-box">
-            <?php the_post_thumbnail( 'pet-animal-store-homepage-thumb', array( 'class' => 'team-image' ) ); ?>
+            <div class="blog-img">
+                <?php the_post_thumbnail( 'pet-animal-store-homepage-thumb', array( 'class' => 'team-image' ) ); ?>
+                <span class="blog_date"><?php echo get_the_time('F j, Y'); ?></span>
+            </div>
+
             <h4 class="team-batch"><?php the_title();?></h4>
-            <p class="blog_date"><?php echo get_the_time('F j, Y'); ?></p>
             <p class="content"><?php the_excerpt();?></p>
+            <a class="read_more" href="<?php the_permalink(); ?>"><?php esc_html_e('Saznaj više','pet-animal-store'); ?></a>
+
         </div>
     </div>
 </div>
