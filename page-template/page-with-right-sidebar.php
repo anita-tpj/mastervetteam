@@ -15,6 +15,9 @@ get_header(); ?>
                     <img src="<?php the_post_thumbnail_url('full'); ?>" width="100%">
                 </div>
                 <h1><?php the_title(); ?></h1>
+                <div class="border-image">
+                    <img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
+                </div>
                 <?php the_content();
                 wp_link_pages( array(
                     'before' => '<div class="page-links">' . __( 'Pages:', 'pet-animal-store' ),
@@ -28,7 +31,7 @@ get_header(); ?>
             <?php endwhile; // end of the loop. ?>             
         </div>
         <div class="col-md-4" id="sidebar">
-			<?php dynamic_sidebar('sidebar-2'); ?>
+			<?php dynamic_sidebar('sidebar-1'); ?>
 		</div>
         <div class="clearfix"></div>
     </div>

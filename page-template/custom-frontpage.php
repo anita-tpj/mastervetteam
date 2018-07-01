@@ -19,20 +19,15 @@ get_header(); ?>
     				<img  src="<?php echo esc_url(get_theme_mod('pet_animal_store_border_image',get_template_directory_uri().'/images/line.png')); ?>" alt="">
     			</div>
 				<p>
-					Veterinarska ambulanta u Petrovaradinu – Master Vet Team, ambulanta koja je uvek otvorena za sve vlasnike kućnih ljubimaca 
+                    Veterinarska ambulanta u Petrovaradinu – <strong>Master Vet Team</strong>, ambulanta koja je uvek otvorena za sve vlasnike kućnih ljubimaca
 					kojima je potrebna naša pomoć.
-					Tokom godina uspešnog rada pomogli smo mnogim psima, mačkama, pticama, gušterima, iguanama, kunićima, zmijama
-					i drugim životinjama. Naš veterinar tim je strpljiv, prijatan i što je najbitnije edukovan i sa dugogodišnjim iskustvom, 
+					Tokom godina uspešnog rada pomogli smo mnogim psima, mačkama, pticama, zečevima, papagajima
+					i drugim malim i velikim životinjama. Naš tim veterinara je strpljiv, prijatan i što je najbitnije edukovan i sa dugogodišnjim iskustvom,
 					uvek spremni da pomognu i daju savet.
 				</p>
 				<p>	
 					Posetite i Vi našu ambulantu sa svojim ljubimcem na adresi:
-					Svetosavska 20, Petrovaradin
-
-					i uverite se u našu stručnost i opremljenost ambulante.
-				</p>
-				<p>
-					Radno vreme: svaki dan radni dan i vikendom 24h/7
+                    <strong><em>Preradovićeva 9, Petrovaradin</em></strong> i uverite se u našu stručnost i opremljenost ambulante.
 				</p>
 			</div>
 			<div class="col-md-6 col-sm-12">
@@ -63,7 +58,7 @@ get_header(); ?>
         <div class="col-sm-6 col-lg-3">
             <div class="text-center">
                 <div class="home-blog-box">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-h-square"></i>
                     <h4 class="team-batch">Hirurgija</h4>
                     <p class="content">
                         Kod nas se sve hiruške intervencije vrše u posebnoj operacionoj sali!
@@ -86,7 +81,7 @@ get_header(); ?>
         <div class="col-sm-6 col-lg-3">
             <div class="text-center">
                 <div class="home-blog-box">
-                    <i class="fa fa-h-square"></i>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                     <h4 class="team-batch">Hitne Intervencije</h4>
                     <p class="content">
                         Bolest ne bira vreme. Zbog toga, naš dežurni veterinar je na raspolaganju Vama i vasim ljubimcima
@@ -96,7 +91,7 @@ get_header(); ?>
             </div>
         </div>
     </div><!--- end row -->
-    <div class="service-btn text-center"><a class="read_more" href="<?php echo get_permalink(); ?>">Saznaj više</a></div>
+    <div class="service-btn text-center"><a class="read_more" href="<?php echo bloginfo('url'); ?>/usluge">Saznaj više</a></div>
 
 </section>
 

@@ -11,14 +11,20 @@ Template name: Contact Page
 
         <?php echo do_shortcode('[gmap-embed id="119"]');?>
         <div class="container">
-            <h3>Kontaktirajte nas:</h3>
+            <h3>Posetite nas ili kontaktirajte:</h3>
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                    <?php echo do_shortcode('[contact-form-7 id="117" title="Contact form 1"]');?>
+                    <div class="info-block">
+                        <p>Radno vreme ambulante</p>
+                        <span><i class="fa fa-clock" aria-hidden="true"></i>radnim danom: 8:00h - 19:00h</span></br>
+                        <span><i class="fa fa-clock" aria-hidden="true"></i>subotom: 8:00h - 16:00h</span></br>
+                        <span><i class="fa fa-clock" aria-hidden="true"></i>Hitne intervencije 24/7</span></br>
+                    </div>
+<!--                    --><?php //echo do_shortcode('[contact-form-7 id="117" title="Contact form 1"]');?>
                 </div>
 
-                <div class="col-md-6 col-xs-12 contact-info">
-                    <address>
+                <div class="col-md-6 col-xs-12 ">
+                    <address class="info-block">
                         <p>Veterinarska ambulanta - Master Vet Team</p>
                         <span><i class="fa fa-map-marker" aria-hidden="true"></i> Preradovićeva 11, Petrovaradin</span></br>
                         <span><i class="fa fa-phone-square" aria-hidden="true"></i> 065/89-89-107</span></br>
