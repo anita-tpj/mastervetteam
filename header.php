@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?> class="main-bodybox">
- <div class="toggle"><a class="toggleMenu" href="#"><img src='<?php echo get_stylesheet_directory_uri(); ?>/images/logo.jpg'></a></div>
+ <div class="toggle"><a class="toggleMenu" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src='<?php echo get_stylesheet_directory_uri(); ?>/images/logo.jpg'></a></div>
 
 <div class="topbar">
   	<div class="container">
@@ -46,7 +46,7 @@
                     <address class="col-md-3 col-sm-3">
                         <span><i class="fa fa-map-marker" aria-hidden="true"></i> Preradovićeva 11, Petrovaradin</span></br>
                         <span><i class="fa fa-phone-square" aria-hidden="true"></i> 065/89-89-107</span>
-                        <p><i class="social-icon fab fa-facebook-f"></i><i class="social-icon fab fa-instagram"></i></p>
+                        <p><a href="https://www.facebook.com/pages/biz/Veterinarska-Ambulanta-Master-Vet-Team-1838774376417196/" target="_blank"><i class="social-icon fab fa-facebook-f"></i></a><a href="https://www.instagram.com/mastervetteam/" target="_blank"><i class="social-icon fab fa-instagram"></i></a></p>
                     </address>
                 </div>
                 <div id="header" class="header-slider row">      
@@ -59,7 +59,7 @@
                         <div class="clear"></div>
                     </div>
                     <div class="col-md-4 cta">
-                        <p><?php echo __("Hitne intervencije 00h-24h", 'pet-animal-store'); ?></p>
+                        <p><?php echo __("Hitne intervencije 00-24h", 'pet-animal-store'); ?></p>
                         <p><?php echo __("065/89-89-107", 'pet-animal-store'); ?></p>
 					</div> 
                 </div>
@@ -76,7 +76,7 @@
 
     <div class="slider-main">
         <div id="slider" class="nivoSlider">
-            <img src='<?php echo get_stylesheet_directory_uri(); ?>/images/header_banner_2.png'>
+            <img src='<?php echo get_stylesheet_directory_uri(); ?>/images/header_banner_3.png'>
         </div>
     </div>
 
@@ -84,7 +84,7 @@
  elseif(!is_page_template( 'page-template/contact.php' )): ?>
      <div class="slider-main">
          <div id="slider" class="nivoSlider">
-             <img src='<?php echo get_stylesheet_directory_uri(); ?>/images/header_banner_2.png'>
+             <img src='<?php echo get_stylesheet_directory_uri(); ?>/images/header_banner_4.png'>
          </div>
      </div>
  <?php

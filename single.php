@@ -79,7 +79,7 @@ get_header(); ?>
 							</div>
 							<hr>					
 						<?php } the_content();
-						the_tags(); ?>
+						 ?>
 		                <div class="clearfix"></div> 	             
 		                <?php
 		                 wp_link_pages( array(
@@ -105,7 +105,7 @@ get_header(); ?>
 								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Sledeći post:', 'pet-animal-store' ) . '</span> ' .
 									'<span class="screen-reader-text">' . __( 'Prethodni post:', 'pet-animal-store' ) . '</span> ' .
 									'<span class="post-title">%title</span>',
-								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Sledeći post:', 'pet-animal-store' ) . '</span> ' .
+								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Prethodni post:', 'pet-animal-store' ) . '</span> ' .
 									'<span class="screen-reader-text">' . __( 'Prethodni post:', 'pet-animal-store' ) . '</span> ' .
 									'<span class="post-title">%title</span>',
 							) );

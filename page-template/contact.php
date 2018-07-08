@@ -16,8 +16,8 @@ Template name: Contact Page
                 <div class="col-md-6 col-xs-12">
                     <div class="info-block">
                         <p>Radno vreme ambulante</p>
-                        <span><i class="fa fa-clock" aria-hidden="true"></i>radnim danom: 8:00h - 19:00h</span></br>
-                        <span><i class="fa fa-clock" aria-hidden="true"></i>subotom: 8:00h - 16:00h</span></br>
+                        <span><i class="fa fa-clock" aria-hidden="true"></i>radnim danom: 9:00h - 19:00h</span></br>
+                        <span><i class="fa fa-clock" aria-hidden="true"></i>subotom: 9:00h - 13:00h</span></br>
                         <span><i class="fa fa-clock" aria-hidden="true"></i>Hitne intervencije 24/7</span></br>
                     </div>
 <!--                    --><?php //echo do_shortcode('[contact-form-7 id="117" title="Contact form 1"]');?>

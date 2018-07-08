@@ -27,7 +27,7 @@ get_header(); ?>
 				</p>
 				<p>	
 					Posetite i Vi našu ambulantu sa svojim ljubimcem na adresi:
-                    <strong><em>Preradovićeva 9, Petrovaradin</em></strong> i uverite se u našu stručnost i opremljenost ambulante.
+                    <strong><em>Preradovićeva 11, Petrovaradin</em></strong> i uverite se u našu stručnost i opremljenost ambulante.
 				</p>
 			</div>
 			<div class="col-md-6 col-sm-12">
@@ -49,8 +49,8 @@ get_header(); ?>
             <div class="text-center">
                 <div class="home-blog-box">
                     <span><i class="fa fa-microchip"></i><i class="fa fa-syringe"></i></span>
-                    <h4 class="team-batch">Vakcine i čipovanje</h4>
-                    <p class="content">Uz svaku vakcinaciju bespaltan klinički pregled!</p>
+                    <h4 class="title">Vakcine i čipovanje</h4>
+                    <p class="content">Uz svaku vakcinaciju besplatan klinički pregled!</p>
                 </div>
             </div>
         </div>
@@ -59,9 +59,8 @@ get_header(); ?>
             <div class="text-center">
                 <div class="home-blog-box">
                     <i class="fa fa-h-square"></i>
-                    <h4 class="team-batch">Hirurgija</h4>
+                    <h4 class="title">Hirurgija</h4>
                     <p class="content">
-                        Kod nas se sve hiruške intervencije vrše u posebnoj operacionoj sali!
                         U cenu svake hiruške intervencije je uključen postoperativni tretman Vašeg ljubimca i vađenje konaca.
                     </p>
                 </div>
@@ -72,7 +71,7 @@ get_header(); ?>
             <div class="text-center">
                 <div class="home-blog-box">
                     <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    <h4 class="team-batch">Kućne posete</h4>
+                    <h4 class="title">Kućne posete</h4>
                     <p class="content">Ukoliko iz nekog razloga niste u mogućnosti da dovedete svog ljubimca, doći ćemo mi do vas!</p>
                 </div>
             </div>
@@ -82,7 +81,7 @@ get_header(); ?>
             <div class="text-center">
                 <div class="home-blog-box">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                    <h4 class="team-batch">Hitne Intervencije</h4>
+                    <h4 class="title">Hitne Intervencije</h4>
                     <p class="content">
                         Bolest ne bira vreme. Zbog toga, naš dežurni veterinar je na raspolaganju Vama i vasim ljubimcima
                         0/24h na telefon 069/89-89-107
@@ -152,13 +151,28 @@ get_header(); ?>
 		<div class="row">
 
             <?php
-            $the_query = new WP_Query( 'posts_per_page=3' );
+            $postnumb = 3;
+            $args = array(
+                'post_type'         => 'post',
+                'orderby'           => 'publish_date',
+                'order'             => 'DESC',
+                'posts_per_page'    => $postnumb,
+            );
+            $the_query = new WP_Query( $args );
 
 
             while ($the_query -> have_posts()) : $the_query -> the_post();
+
+            $counter++;
+
+            if ( $counter < $postnumb + 1 ):
+
                 get_template_part( 'template-parts/content', 'home' );
 
+            endif;
+
             endwhile;
+
             wp_reset_postdata();
 
             ?>
